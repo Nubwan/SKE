@@ -9,19 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Itim&family=Sriracha&display=swap"
       rel="stylesheet"
     />
+    <script>
+      let y = window.prompt("Please enter your name");
+      window.alert("Welcome to SKE 2024 Suankularb " + y);
+    </script>
     <style>
       body {
         font-family: "Itim", cursive;
         font-weight: 400;
         font-style: normal;
+        overflow-x: hidden;
         background-repeat: repeat;
-        background: 
-        linear-gradient(rgba(24, 24, 24, 0.5), rgba(24, 24, 24, 0.5)),
-        conic-gradient(
-            at 50% calc(100% / 6),
-            #9347ff 60deg,
-            #0000 0
+        background: linear-gradient(
+            rgba(24, 24, 24, 0.5),
+            rgba(24, 24, 24, 0.5)
           ),
+          conic-gradient(at 50% calc(100% / 6), #9347ff 60deg, #0000 0),
           conic-gradient(at calc(100% / 6) 50%, #0000 240deg, #9347ff 0),
           conic-gradient(
             from 180deg at calc(100% / 6) calc(500% / 6),
@@ -42,20 +45,11 @@
           );
 
         background-size: calc(6 * 0.866 * 25px) calc(3 * 25px);
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+        cursor: url("sk.cur"), auto;
+        height: 100vh;
       }
       mark {
-        background: linear-gradient(rgb(255, 130, 193), rgb(214, 83, 214));
+        background: linear-gradient(rgb(255, 157, 206), rgb(214, 83, 214));
         padding: 10px;
         border-radius: 10px;
       }
@@ -69,10 +63,28 @@
         width: 200px;
         transition: 0.3s;
       }
+
+      #btn1 {
+        background: radial-gradient(rgb(255, 157, 173), #ff4444);
+      }
+      #btn2 {
+        background: radial-gradient(rgb(241, 171, 255), rgb(255, 105, 198));
+      }
+      #btn3 {
+        background: radial-gradient(rgb(193, 127, 255), rgb(139, 67, 255));
+      }
+      #btn4 {
+        background: radial-gradient(skyblue, rgb(103, 139, 255));
+      }
       button:hover {
         background-color: rgb(204, 204, 204);
         color: rgb(107, 26, 114);
         cursor: pointer;
+        font-weight: bold;
+      }
+      hr {
+        background: radial-gradient(rgb(255, 36, 182), rgb(126, 28, 255));
+        border: none;
       }
     </style>
     <title>SKE 2024</title>
@@ -81,30 +93,34 @@
     <marquee>
       <h2><mark>Welcome to Suankularb Exhibition 2024 🌹</mark></h2>
     </marquee>
-    <div>
+    <div style="display: flex; flex-direction: column; justify-content: center">
       <div
         style="
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
-          min-width: 900px;
           gap: 20px;
           margin-bottom: 10px;
+          width: 100%;
         "
       >
-        <button onclick="document.location='http://www.sk.ac.th/'">
+        <button id="btn1" onclick="document.location='http://www.sk.ac.th/'">
           Suankularb
         </button>
         <button
+          id="btn2"
           onclick="document.location='https://formesign.com/public/107774460759090991944/all/form/1FAIpQLSdYWz9xXkW2r5saSK0KqE57YTDx_Nn786LZ0uPa70azk-0TUw'"
         >
           Shopping
         </button>
         <button
+          id="btn3"
           onclick="document.location='https://www.instagram.com/ske2024.official/'"
         >
           IG
         </button>
         <button
+          id="btn4"
           onclick="document.location='https://www.tiktok.com/@ske2024.official?fbclid=IwY2xjawGX9KVleHRuA2FlbQIxMAABHfaeMFSj4weQqf_Nd4jx0Qhf8w5zYp6mXVesmczTpspRPAkVEZULZuz9MQ_aem_qi7qc2Q0-QVjoGWZXmMEQg'"
         >
           Tiktok
@@ -112,36 +128,87 @@
       </div>
       <div
         style="
-          background: linear-gradient(
-              217deg,
-              rgb(118, 150, 255),
-              rgba(255, 0, 0, 0.11) 60%
-            ),
-            linear-gradient(
-              127deg,
-              rgba(241, 135, 171, 0.932),
-              rgba(68, 0, 255, 0.178) 80%
-            ),
-            linear-gradient(
-              336deg,
-              rgba(180, 52, 240, 0.801),
-              rgba(255, 0, 191, 0.164) 70.71%
-            );
-          background-color: #919191;
-          width: 250px;
-          padding: 20px;
-          border-radius: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          gap: 20px;
+          max-width: 1400px;
+          align-self: center;
         "
       >
-        <h3>🌹สารบัญ🌹</h3>
-        <p>บทนำ</p>
-        <p>หัวข้อหลักของนิทรรศการ</p>
-        <p>กิจกรรมและการแสดง</p>
-        <p>ผลงานของนักเรียน</p>
-        <p>ภาพบรรยากาศงาน</p>
-        <p>ข้อมูลติดต่อ</p>
-        <p>ผู้จัดทำ</p>
+        <div
+          style="
+            background: linear-gradient(
+                217deg,
+                rgb(118, 150, 255),
+                rgba(255, 0, 0, 0.11) 60%
+              ),
+              linear-gradient(
+                127deg,
+                rgba(241, 135, 171, 0.932),
+                rgba(68, 0, 255, 0.178) 80%
+              ),
+              linear-gradient(
+                336deg,
+                rgba(180, 52, 240, 0.801),
+                rgba(255, 0, 191, 0.164) 70.71%
+              );
+            background-color: #919191;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 250px;
+          "
+        >
+          <h3>🌹สารบัญ🌹</h3>
+          <a href="Intro.html">บทนำ</a>
+          <p>หัวข้อหลักของนิทรรศการ</p>
+          <p>กิจกรรมและการแสดง</p>
+          <p>ผลงานของนักเรียน</p>
+          <p>ภาพบรรยากาศงาน</p>
+          <p>ข้อมูลติดต่อ</p>
+          <p>ผู้จัดทำ</p>
+        </div>
+
+        <div style="height: 400px">
+          <img src="SKE.gif" style="max-height: 100%; min-height: 30%" />
+        </div>
+        <div>
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2F%25E0%25B8%2599%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25A8%25E0%25B8%25AA%25E0%25B8%25A7%25E0%25B8%2599%25E0%25B8%25AF-2024-61563317562968%2F%3Fauthuser%3D0&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="340"
+            height="100%"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
       </div>
+      <hr width="50%" size="8" style="margin-top: 30px" />
+      <center>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/CTKSW4AJjiY?si=QP4MkPwQpbLTJ4nQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2zAjlJsnVQU?si=0yJoSdlk70pVtxYn"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </center>
     </div>
   </body>
 </html>
